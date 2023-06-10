@@ -4,7 +4,10 @@ from .SongModel import SongModel
 
 class PlaylistModel(models.Model):
     name = models.CharField(max_length=100)
-    songs = models.ManyToManyField(SongModel)
+    songs = models.ManyToManyField(
+        SongModel,
+        blank=True
+    )
 
     def __str__(self):
         return self.name
