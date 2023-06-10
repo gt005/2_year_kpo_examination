@@ -3,7 +3,7 @@ from django.db import models
 
 class SongModel(models.Model):
     name = models.CharField(max_length=100)
-    duration = models.PositiveIntegerField()
+    duration_seconds = models.PositiveIntegerField()
     author = models.CharField(max_length=100)
     genre = models.CharField(max_length=100)
     album_name = models.CharField(max_length=100)

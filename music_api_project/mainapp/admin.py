@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import SongModel, PlaylistModel
 
-# Register your models here.
+admin.site.register(SongModel)
+admin.site.register(PlaylistModel)
