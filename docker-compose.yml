@@ -10,8 +10,21 @@ services:
       - KPO_exam__music_api_service_postgres_db__volume:/var/lib/postgresql/data/
     networks:
       - music_api_service_network
+
+  kpo_exam__music_api_service_api:
+    build:
+      context: music_api_project/
+      dockerfile: Dockerfile
+    container_name: KPO_exam__music_api_service_api
+    env_file:
+      - music_api_project/.music_api_env
+    depends_on:
+      - KPO_exam__music_api_service_postgres_db
+    networks:
+      - music_api_service_network
     ports:
-      - "5432:5432"
+      - "8000:8000"
+
 
 volumes:
     KPO_exam__music_api_service_postgres_db__volume:

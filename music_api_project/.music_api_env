@@ -1,0 +1,5 @@
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=JhdhhweuHHU2837
+POSTGRES_DB=KPO_exam__music_api_service_postgres_db
+POSTGRES_PORT=5432
+POSTGRES_HOST=KPO_exam__music_api_service_postgres_db
